@@ -14,13 +14,15 @@ const dialogue = [
   {
     side: "right",
     speaker: "Em:",
-    text: "I see you've completed the quest. Well done.",
+    text: "I see you have completed your quest. Well done",
+    audio: "homeline1.mp3"
   },
 
   {
     side: "left",
     speaker: "William:",
-    text: "happy anniversary!!",
+    text: "Anything for key guy.. uh uh I mean you! Happy anniversary",
+    audio: "homeline2.mp3"
   },
 
 
