@@ -14,7 +14,7 @@ const dialogue = [
   {
     side: "right",
     speaker: "Em:",
-    text: "My baby is home! And you brought the duck!",
+    text: "I see you've completed the quest. Well done.",
   },
 
   {
