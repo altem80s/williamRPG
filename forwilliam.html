@@ -1,0 +1,89 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> the game </title>
+
+  <link rel="stylesheet" href="emma.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="envelope" onclick="openEnvelope()">
+  <div class="flap"></div>
+
+  <div class="click-text">Mail is Here! <br> (Click)</div>
+
+  <div class="letter">
+    <h1>I LOVE YOU <br> Happy one year</h1>
+
+  </div>
+</div>
+      
+
+<div class="flower-field">
+
+  <div class="flower small" style="left: 0px;">
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+  </div>
+
+  <div class="flower" style="left: 120px;">
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+  </div>
+
+  <div class="flower big" style="left: 260px;">
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+  </div>
+
+  <div class="flower small" style="left: 420px;">
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+  </div>
+
+  <div class="flower" style="left: 560px;">
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+  </div>
+
+  <div class="flower big" style="left: 720px;">
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+  </div>
+
+</div>
+<img src="left.png" class="fly fly-left">
+<img src="right.png" class="fly fly-right">
+    <img src="keyguy.png" class="fly fly-middle">
+      
+      <a href="minigame.html" class="quest-btn">
+  Accept His Quest
+   </a>
+
+  </div>
+
+  <script>
+    function openEnvelope() {
+      document.body.classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>

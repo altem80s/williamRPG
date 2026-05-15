@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dialogue Scene</title>
+
+  <link rel="stylesheet" href="nextstep.css">
+
+</head>
+
+<body>
+
+  <div class="scene">
+
+    <!-- LEFT CHARACTER -->
+
+    <div class="character left-character">
+
+      <img src="keys.png" class="character-img">
+
+    </div>
+
+    <!-- LEFT SPEECH -->
+
+    <div class="speech left-speech" id="left-box">
+
+      <div class="speaker" id="left-speaker"></div>
+
+      <div class="text" id="left-text"></div>
+
+    </div>
+
+    <!-- RIGHT SPEECH -->
+
+    <div class="speech right-speech" id="right-box">
+
+      <div class="speaker" id="right-speaker"></div>
+
+      <div class="text" id="right-text"></div>
+
+    </div>
+
+    <!-- NEXT BUTTON -->
+
+    <button onclick="nextDialogue()" class="next-btn">
+      Next →
+    </button>
+
+    <!-- RIGHT CHARACTER -->
+
+    <div class="character right-character">
+
+      <img src="zestyyy.png" class="character-img">
+
+    </div>
+
+    <!-- FINAL POPUP -->
+
+    <div class="final-popup" id="final-popup">
+
+      <div class="popup-content">
+
+        <h2>Enter The Forest</h2>
+
+        <button onclick="window.location.href='finalgame.html'">
+          Enter →
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="nextstep.js"></script>
+
+</body>
+
+</html>
