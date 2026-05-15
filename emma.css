@@ -1,0 +1,377 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ffe4ec, #fff7fa);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+/* Envelope */
+
+.envelope {
+  position: relative;
+  width: 260px;
+  height: 180px;
+  background: #ffb6c1;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+body.open .letter {
+  top: 10px;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff8fab;
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  transform-origin: top;
+  transition: transform 0.8s ease;
+}
+
+.letter {
+  position: absolute;
+
+  width: 90%;
+  height: 90%;
+
+  background: white;
+
+  left: 5%;
+  top: 100%;
+
+  border-radius: 8px;
+  padding: 20px;
+
+  transition: top 0.8s ease;
+
+  z-index: 2;
+}
+
+.letter h1 {
+  margin-bottom: 10px;
+  color: #ff5d8f;
+}
+
+/* Flowers */
+
+/* FLOWER FIELD */
+
+.flower-field {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -120px;
+
+  width: 900px;
+  height: 350px;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* INDIVIDUAL FLOWER */
+
+.flower {
+  position: absolute;
+  bottom: 0;
+
+  width: 70px;
+  height: 70px;
+
+  transform: scale(0);
+}
+
+/* STEM */
+
+.flower::before {
+  content: "";
+
+  position: absolute;
+  width: 6px;
+  height: 140px;
+
+  background: #148c14;
+
+  left: 50%;
+  top: 40px;
+
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* CENTER */
+
+.flower::after {
+  content: "";
+
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  background: gold;
+  border-radius: 50%;
+
+  top: 25px;
+  left: 25px;
+
+  z-index: 3;
+}
+
+/* PETALS */
+
+.petal {
+  position: absolute;
+
+  width: 32px;
+  height: 32px;
+
+  background: #ffb6c1;
+  border-radius: 50%;
+}
+
+/* PETAL POSITIONS */
+
+.p1 {
+  top: 0;
+  left: 19px;
+}
+
+.p2 {
+  top: 19px;
+  left: 0;
+}
+
+.p3 {
+  top: 19px;
+  right: 0;
+}
+
+.p4 {
+  bottom: 0;
+  left: 19px;
+}
+
+/* FLOWER SIZES */
+
+.small {
+  scale: 0.7;
+}
+
+.big {
+  scale: 1.2;
+}
+
+.flower-field {
+  z-index: 1;
+}
+
+
+/* GROW ANIMATION */
+
+body.open .flower {
+  animation: bloom 1s forwards;
+}
+
+@keyframes bloom {
+  0% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.click-text {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  left: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  z-index: 5;
+  pointer-events: none;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+body.open .click-text {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+
+.left-png,
+.right-png {
+  position: absolute;
+  z-index: 999;
+}
+
+.flower-field {
+  z-index: 1;
+}
+
+
+
+.fly {
+  position: absolute;
+  width: 220px;
+  opacity: 0;
+  top: 220px;
+  transition: all 1.5s ease;
+}
+
+/* starts offscreen */
+
+.fly-left {
+  left: -300px;
+}
+
+
+.fly-right {
+  right: -300px;
+  top: 230px;
+}
+
+.fly-left,
+.fly-right {
+  z-index: 9999;
+}
+
+body.open .fly {
+  opacity: 1;
+}
+
+body.open .fly-left {
+  left: 10px;
+}
+
+body.open .fly-right {
+  right: 10px;
+}
+
+
+
+
+/* key guy */
+
+.fly-middle {
+  position: absolute;
+
+  width: 220px;
+
+  top: 260px;
+  right: -400px;
+
+  opacity: 0;
+
+  z-index: 9999;
+
+  transition: all 2s ease;
+}
+
+/* AFTER OPEN */
+
+body.open .fly-middle {
+  right: 200px;
+  opacity: 1;
+    top: -200px;
+}
+
+
+
+
+/* QUEST BUTTON */
+
+.quest-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  bottom: -120px;
+
+  padding: 14px 28px;
+
+  background: #ff8fab;
+  color: black;
+
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+font-family: "Papyrus";
+
+  border-radius: 40px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+
+  opacity: 0;
+
+  z-index: 9999;
+
+  transition:
+    opacity 1s ease,
+    transform 0.3s ease;
+
+  pointer-events: none;
+}
+
+/* SHOW AFTER OPEN */
+
+body.open .quest-btn {
+  opacity: 1;
+
+  bottom: 40px;
+
+  pointer-events: auto;
+
+  transition-delay: 2.5s;
+}
+
+/* HOVER */
+
+.quest-btn:hover {
+  transform: translateX(-50%) scale(1.05);
+  background: #ff5d8f;
+}
